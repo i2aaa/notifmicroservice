@@ -24,7 +24,7 @@ headers = {"Content-Type": "application/json"}
 
 response = requests.post(url, json=payload, headers=headers)
 print(response.json())
-
+```
 ### 2. Receiving Data 
 
 The response from the microservice will be in JSON format. It will include the following keys:
@@ -120,7 +120,8 @@ python notifications.py
 ### 2. Network Connectivity:
 - If you need to access the server from another device, simply modify the Flask `app.run` call as so:
 ```python
-
+app.run(host='0.0.0.0', port=5000)
+```
 3. Dependencies:
 - Ensure Flask is installed in your virtual environment:
 ```bash
